@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Chapter (setting up env)/7. Makefiles.md",
+                "file": "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7. Makefiles"
+              "title": "5. Shorty of strings and runes"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. Chapter (setting up env)/7. Makefiles.md",
+                "file": "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. Chapter (setting up env)/7. Makefiles.md",
+                "file": "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. Chapter (setting up env)/7. Makefiles.md",
+                "file": "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,17 +190,22 @@
   },
   "active": "0959d3a4fb6ec083",
   "lastOpenFiles": [
-    "1. Chapter (setting up env)/6. Setting up golinter.md",
+    "2. Chapter (types and declarations)/4. Floating point operations.md",
+    "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
+    "2. Chapter (types and declarations)/3. Integer operators.md",
+    "2. Chapter (types and declarations)/2. Special integer types.md",
+    "2. Chapter (types and declarations)/1. Built in types.md",
+    "0. Preface/1. Golang is boring.md",
     "1. Chapter (setting up env)/7. Makefiles.md",
+    "1. Chapter (setting up env)/6. Setting up golinter.md",
     "1. Chapter (setting up env)/5. Getting third party go tools.md",
     "1. Chapter (setting up env)/4. The go command.md",
     "1. Chapter (setting up env)/3. Setting up GOPATH variable.md",
     "1. Chapter (setting up env)/2. The go workspace.md",
     "1. Chapter (setting up env)/1. Installing go tools.md",
     "0. Preface/2. Code examples from this book.md",
-    "0. Preface/1. Golang is boring.md",
     "3. Chapter",
-    "2. Chapter",
+    "2. Chapter (types and declarations)",
     "1. Chapter (setting up env)",
     "0. Preface"
   ]
