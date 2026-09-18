@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Chapter (composite types)/13. Comparing and converting structs.md",
+                "file": "4. Chapter (blocks, shadows and control structures)/7. Labeling for statements.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13. Comparing and converting structs"
+              "title": "7. Labeling for statements"
             }
           }
         ]
@@ -190,8 +190,16 @@
   },
   "active": "0959d3a4fb6ec083",
   "lastOpenFiles": [
-    "3. Chapter (composite types)/12. Anonymous structs.md",
+    "4. Chapter (blocks, shadows and control structures)/6. Iterating over maps.md",
+    "4. Chapter (blocks, shadows and control structures)/7. Labeling for statements.md",
+    "4. Chapter (blocks, shadows and control structures)/5. The for range statement.md",
+    "4. Chapter (blocks, shadows and control structures)/3. The for statement.md",
+    "4. Chapter (blocks, shadows and control structures)/4. Break and continue.md",
+    "4. Chapter (blocks, shadows and control structures)/2. If statements.md",
+    "4. Chapter (blocks, shadows and control structures)/!. Shadowing variables.md",
     "3. Chapter (composite types)/13. Comparing and converting structs.md",
+    "4. Chapter (blocks, shadows and control structures)",
+    "3. Chapter (composite types)/12. Anonymous structs.md",
     "3. Chapter (composite types)/11. Structs.md",
     "3. Chapter (composite types)/10. Using maps as sets.md",
     "3. Chapter (composite types)/8. Maps.md",
@@ -209,13 +217,6 @@
     "2. Chapter (types and declarations)/6. Var versus walrus operator.md",
     "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
     "2. Chapter (types and declarations)/4. Floating point operations.md",
-    "2. Chapter (types and declarations)/3. Integer operators.md",
-    "2. Chapter (types and declarations)/2. Special integer types.md",
-    "2. Chapter (types and declarations)/1. Built in types.md",
-    "0. Preface/1. Golang is boring.md",
-    "1. Chapter (setting up env)/7. Makefiles.md",
-    "1. Chapter (setting up env)/6. Setting up golinter.md",
-    "1. Chapter (setting up env)/5. Getting third party go tools.md",
     "3. Chapter (composite types)",
     "2. Chapter (types and declarations)",
     "1. Chapter (setting up env)",
