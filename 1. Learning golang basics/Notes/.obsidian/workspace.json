@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
+                "file": "3. Chapter (composite types)/13. Comparing and converting structs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5. Shorty of strings and runes"
+              "title": "13. Comparing and converting structs"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 298.5
   },
   "right": {
     "id": "ef9df2b164462d9e",
@@ -190,8 +190,25 @@
   },
   "active": "0959d3a4fb6ec083",
   "lastOpenFiles": [
-    "2. Chapter (types and declarations)/4. Floating point operations.md",
+    "3. Chapter (composite types)/12. Anonymous structs.md",
+    "3. Chapter (composite types)/13. Comparing and converting structs.md",
+    "3. Chapter (composite types)/11. Structs.md",
+    "3. Chapter (composite types)/10. Using maps as sets.md",
+    "3. Chapter (composite types)/8. Maps.md",
+    "3. Chapter (composite types)/9. The comma ok idiom ( on maps ).md",
+    "3. Chapter (composite types)/7. Strings and runes and bytes.md",
+    "3. Chapter (composite types)/6. converting arrays to slices.md",
+    "3. Chapter (composite types)/5. Slicing slices.md",
+    "3. Chapter (composite types)/4. make.md",
+    "3. Chapter (composite types)/2. Slices.md",
+    "3. Chapter (composite types)/3. The go runtime.md",
+    "3. Chapter (composite types)/1. Arrays.md",
+    "2. Chapter (types and declarations)/9. Naming variables the correct way.md",
+    "2. Chapter (types and declarations)/8. Unused variables.md",
+    "2. Chapter (types and declarations)/7. typed and untyped constants.md",
+    "2. Chapter (types and declarations)/6. Var versus walrus operator.md",
     "2. Chapter (types and declarations)/5. Shorty of strings and runes.md",
+    "2. Chapter (types and declarations)/4. Floating point operations.md",
     "2. Chapter (types and declarations)/3. Integer operators.md",
     "2. Chapter (types and declarations)/2. Special integer types.md",
     "2. Chapter (types and declarations)/1. Built in types.md",
@@ -199,12 +216,7 @@
     "1. Chapter (setting up env)/7. Makefiles.md",
     "1. Chapter (setting up env)/6. Setting up golinter.md",
     "1. Chapter (setting up env)/5. Getting third party go tools.md",
-    "1. Chapter (setting up env)/4. The go command.md",
-    "1. Chapter (setting up env)/3. Setting up GOPATH variable.md",
-    "1. Chapter (setting up env)/2. The go workspace.md",
-    "1. Chapter (setting up env)/1. Installing go tools.md",
-    "0. Preface/2. Code examples from this book.md",
-    "3. Chapter",
+    "3. Chapter (composite types)",
     "2. Chapter (types and declarations)",
     "1. Chapter (setting up env)",
     "0. Preface"
