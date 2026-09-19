@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5. Chapter (functions)/13. Go is call by value.md",
+                "file": "6. Chapter (pointers)/7. Reducing the garbage collectors workload.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13. Go is call by value"
+              "title": "7. Reducing the garbage collectors workload"
             }
           }
         ]
@@ -190,8 +190,17 @@
   },
   "active": "0959d3a4fb6ec083",
   "lastOpenFiles": [
-    "5. Chapter (functions)/12. Defer keyword.md",
+    "6. Chapter (pointers)/6. simple way to read data from a data source.md",
+    "6. Chapter (pointers)/7. Reducing the garbage collectors workload.md",
+    "6. Chapter (pointers)/5. Difference between maps and slices.md",
+    "6. Chapter (pointers)/4. Zero value vs No value.md",
+    "6. Chapter (pointers)/3. Pointers are the last resort.md",
+    "6. Chapter (pointers)/2. Pointers Indicate Mutable Parameters.md",
+    "6. Chapter (pointers)/1. Primer to pointers.md",
+    "6. Chapter (pointers)/Pasted image 20260919110623.png",
     "5. Chapter (functions)/13. Go is call by value.md",
+    "6. Chapter (pointers)",
+    "5. Chapter (functions)/12. Defer keyword.md",
     "5. Chapter (functions)/11. Returning functions from functions.md",
     "5. Chapter (functions)/10. Passing functions as parameters.md",
     "5. Chapter (functions)/9. Closures.md",
@@ -210,14 +219,7 @@
     "4. Chapter (blocks, shadows and control structures)/7. Labeling for statements.md",
     "4. Chapter (blocks, shadows and control structures)/6. Iterating over maps.md",
     "4. Chapter (blocks, shadows and control structures)/5. The for range statement.md",
-    "4. Chapter (blocks, shadows and control structures)/3. The for statement.md",
-    "4. Chapter (blocks, shadows and control structures)/4. Break and continue.md",
-    "4. Chapter (blocks, shadows and control structures)/2. If statements.md",
-    "4. Chapter (blocks, shadows and control structures)/!. Shadowing variables.md",
-    "3. Chapter (composite types)/13. Comparing and converting structs.md",
     "4. Chapter (blocks, shadows and control structures)",
-    "3. Chapter (composite types)/12. Anonymous structs.md",
-    "3. Chapter (composite types)/11. Structs.md",
     "3. Chapter (composite types)",
     "2. Chapter (types and declarations)",
     "1. Chapter (setting up env)",
