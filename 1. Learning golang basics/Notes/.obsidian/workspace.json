@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Chapter (pointers)/7. Reducing the garbage collectors workload.md",
+                "file": "7. Chapter (types, methods and interfaces)/12. Function types are a bridge to interfaces.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7. Reducing the garbage collectors workload"
+              "title": "12. Function types are a bridge to interfaces"
             }
           }
         ]
@@ -190,8 +190,21 @@
   },
   "active": "0959d3a4fb6ec083",
   "lastOpenFiles": [
-    "6. Chapter (pointers)/6. simple way to read data from a data source.md",
+    "7. Chapter (types, methods and interfaces)/11. Type assertions and type switches.md",
+    "7. Chapter (types, methods and interfaces)/12. Function types are a bridge to interfaces.md",
+    "7. Chapter (types, methods and interfaces)/10. Accept interfaces, return structs.md",
+    "7. Chapter (types, methods and interfaces)/9. Quick lesson on interfaces.md",
+    "7. Chapter (types, methods and interfaces)/8. Embedding is not inheritance.md",
+    "7. Chapter (types, methods and interfaces)/7. Use embedding for composition.md",
+    "7. Chapter (types, methods and interfaces)/6. Type declarations aren't inheritance..md",
+    "7. Chapter (types, methods and interfaces)/5. Methods are functions too.md",
+    "7. Chapter (types, methods and interfaces)/4. Code Your Methods for nil Instances.md",
+    "7. Chapter (types, methods and interfaces)/3. Pointer receivers and value receivers.md",
+    "7. Chapter (types, methods and interfaces)/2. Methods.md",
+    "7. Chapter (types, methods and interfaces)/1. Types in go.md",
     "6. Chapter (pointers)/7. Reducing the garbage collectors workload.md",
+    "7. Chapter (types, methods and interfaces)",
+    "6. Chapter (pointers)/6. simple way to read data from a data source.md",
     "6. Chapter (pointers)/5. Difference between maps and slices.md",
     "6. Chapter (pointers)/4. Zero value vs No value.md",
     "6. Chapter (pointers)/3. Pointers are the last resort.md",
@@ -206,19 +219,7 @@
     "5. Chapter (functions)/9. Closures.md",
     "5. Chapter (functions)/8. Anonymous functions.md",
     "5. Chapter (functions)/7. Example of a simple calculator app.md",
-    "5. Chapter (functions)/6. Functions are values.md",
-    "5. Chapter (functions)/5. Never use blank returns.md",
-    "5. Chapter (functions)/4. Multiple return values.md",
-    "5. Chapter (functions)/3. Variadic input parameters and slices.md",
-    "5. Chapter (functions)/2. Simulating named and optional parameters.md",
-    "5. Chapter (functions)/1. Declaring and calling functions.md",
-    "4. Chapter (blocks, shadows and control structures)/10. goto.md",
     "5. Chapter (functions)",
-    "4. Chapter (blocks, shadows and control structures)/9. Switch.md",
-    "4. Chapter (blocks, shadows and control structures)/8. Range loop vs for loop.md",
-    "4. Chapter (blocks, shadows and control structures)/7. Labeling for statements.md",
-    "4. Chapter (blocks, shadows and control structures)/6. Iterating over maps.md",
-    "4. Chapter (blocks, shadows and control structures)/5. The for range statement.md",
     "4. Chapter (blocks, shadows and control structures)",
     "3. Chapter (composite types)",
     "2. Chapter (types and declarations)",
