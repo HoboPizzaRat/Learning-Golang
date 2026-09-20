@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"log"
@@ -93,6 +94,30 @@ func ServeIndex(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("templates/index.html")
 	t.Execute(w, Pages)
 }
+func APIPage(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	pageGUID := vars["guid"]
+	thisPage := Page{}
+	fmt.Println(pageGUID)
+	err := database.
+		QueryRow("SELECT page_title,page_content,page_date FROM pages WHERE page_guid=?", pageGUID).
+		Scan(&thisPage.Title, &thisPage.RawContent, &thisPage.Date)
+
+	thisPage.Content = template.HTML(thisPage.RawContent)
+	if err != nil {
+		http.Error(w, http.StatusText(404), http.StatusNotFound)
+		log.Println(err)
+		return
+	}
+	APIOutput, err := json.Marshal(thisPage)
+	fmt.Println(APIOutput)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintln(w, thisPage)
+}
 
 func main() {
 	dbConn := fmt.Sprintf("%s:%s@tcp(%s%s)/%s", DBUser, DBPass, DBHost, DBPort, DBDbase)
@@ -104,6 +129,12 @@ func main() {
 	}
 	database = db
 	routes := mux.NewRouter()
+	routes.HandleFunc("/api/pages", APIPage).
+		Methods("GET").
+		Schemes("https")
+	routes.HandleFunc("/api/pages/{guid:[0-9a-zA\\-]+}", APIPage).
+		Methods("GET").
+		Schemes("https")
 	routes.HandleFunc("/page/{guid:[0-9a-zA-Z\\-]+}", ServePage)
 	routes.HandleFunc("/", RedirIndex)
 	routes.HandleFunc("/home", ServeIndex)
