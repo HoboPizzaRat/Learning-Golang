@@ -71,6 +71,10 @@ func ServePage(w http.ResponseWriter, r *http.Request) {
 			&thisPage.Date,
 			&thisPage.GUID,
 		)
+	if err != nil {
+		http.Error(w, "some weird error occured", http.StatusInternalServerError)
+		return
+	}
 
 	thisPage.Content = template.HTML(thisPage.RawContent)
 
@@ -118,9 +122,10 @@ func ServeIndex(w http.ResponseWriter, r *http.Request) {
 		err := pages.Scan(
 			&thisPage.Title,
 			&thisPage.Content,
-			&thisPage.Date,
 			&thisPage.GUID,
+			&thisPage.Date,
 		)
+		thisPage.Content = template.HTML(thisPage.RawContent)
 		if err != nil {
 			fmt.Println("SCAN ERROR", err)
 		}
@@ -139,50 +144,67 @@ func APIPage(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	pageGUID := vars["guid"]
 	thisPage := Page{}
-	fmt.Println(pageGUID)
+
 	err := database.
 		QueryRow("SELECT page_title,page_content,page_date FROM pages WHERE page_guid=?", pageGUID).
 		Scan(&thisPage.Title, &thisPage.RawContent, &thisPage.Date)
 
-	thisPage.Content = template.HTML(thisPage.RawContent)
 	if err != nil {
 		http.Error(w, http.StatusText(404), http.StatusNotFound)
 		log.Println(err)
 		return
 	}
-	APIOutput, err := json.Marshal(thisPage)
-	fmt.Println(APIOutput)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
+	thisPage.Content = template.HTML(thisPage.RawContent)
+
 	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprintln(w, thisPage)
+	json.NewEncoder(w).Encode(thisPage)
 }
 func APICommentPut(w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
 	if err != nil {
-		log.Println(err.Error())
+		log.Println(err)
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
 	}
 
 	vars := mux.Vars(r)
 	id := vars["id"]
-	fmt.Println(id)
+
+	fmt.Println("Updating comment:", id)
 
 	name := r.FormValue("name")
 	email := r.FormValue("email")
 	comments := r.FormValue("comments")
 
-	res, err := database.
-		Exec("UPDATE comments SET comment_name=?, comment_email=?, comment_text=? WHERE comment_id=?", name, email, comments, id)
-	fmt.Println(res)
+	res, err := database.Exec(
+		"UPDATE comments SET comment_name=?, comment_email=?, comment_text=? WHERE id=?",
+		name,
+		email,
+		comments,
+		id,
+	)
+
 	if err != nil {
-		log.Println(err.Error())
+		log.Println("UPDATE ERROR:", err)
+		http.Error(w, "Database error", http.StatusInternalServerError)
+		return
 	}
-	var resp JSONResponse
-	jsonResp, _ := json.Marshal(resp)
+
+	rows, err := res.RowsAffected()
+	if err != nil {
+		log.Println("RowsAffected ERROR:", err)
+	}
+
+	fmt.Println("Rows updated:", rows)
+
+	resp := JSONResponse{
+		Fields: make(map[string]string),
+	}
+
+	resp.Fields["updated"] = strconv.FormatBool(rows > 0)
+
 	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprintln(w, jsonResp)
+	json.NewEncoder(w).Encode(resp)
 }
 func APICommentPost(w http.ResponseWriter, r *http.Request) {
 	var commentAdded bool
@@ -209,7 +231,7 @@ func APICommentPost(w http.ResponseWriter, r *http.Request) {
 	}
 
 	res, err := database.
-		Exec("INSERT INTO comments SET comment_name=?, comment_email=?, comment_text=?, page_id=?, comment_id=?, comment_date=?", name, email, comments, pageID)
+		Exec("INSERT INTO comments SET comment_name=?, comment_email=?, comment_text=?, page_id=?", name, email, comments, pageID)
 	if err != nil {
 		log.Println(err.Error())
 	}
