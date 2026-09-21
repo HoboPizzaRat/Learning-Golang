@@ -14,6 +14,16 @@ func main() {
 	// don't edit above this line
 
 	// ?
+	finalCost = bulkMessageCost
+	if isPremiumUser {
+		finalCost *= (1 - discountRate)
+	}
+	if finalCost <= accountBalance {
+		accountBalance -= accountBalance
+		fmt.Println(purchaseSuccessMessage)
+	} else {
+		fmt.Println(insufficientFundMessage)
+	}
 
 	// don't edit below this line
 
