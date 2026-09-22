@@ -1,0 +1,50 @@
+package main
+
+import "fmt"
+
+// Create a SendMessage method for the User struct.
+
+// It should take a message string and messageLength int as inputs.
+
+// If the messageLength is within the user's MessageCharLimit,
+// return the original message and true (indicating the message can be sent),
+// otherwise, return an empty string and false
+func (u User) SendMessage(message string, messageLength int) (string, bool) {
+	if messageLength > u.MessageCharLimit {
+		return "", false
+	}
+	return message, true
+
+}
+
+type User struct {
+	Name string
+	Membership
+}
+
+type Membership struct {
+	Type             string
+	MessageCharLimit int
+}
+
+func newUser(name string, membershipType string) User {
+	membership := Membership{Type: membershipType}
+	if membershipType == "premium" {
+		membership.MessageCharLimit = 1000
+	} else {
+		membership.Type = "standard"
+		membership.MessageCharLimit = 100
+	}
+	return User{Name: name, Membership: membership}
+}
+
+func main() {
+	var user User = newUser("kekkonen", "premium")
+
+	messageToSent, isSuccess := user.SendMessage("Kakkakukka", len("Kakkakukka"))
+	if !isSuccess {
+		fmt.Println("failure to send the message")
+		return
+	}
+	fmt.Println(messageToSent)
+}
